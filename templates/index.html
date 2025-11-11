@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>Maptiler with search</title>
+    
+    <link href="https://unpkg.com/maplibre-gl@4.1.0/dist/maplibre-gl.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+    
+    <script src="https://unpkg.com/maplibre-gl@4.1.0/dist/maplibre-gl.js"></script>
+</head>
+<body>
+    <div id="map"></div>
+    
+    <a href="#" class="map-logo">MapExplorer</a>
+    
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search for a location...">
+        <button id="search-button">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+            </svg>
+        </button>
+        <div id="search-results" class="search-results hidden"></div>
+    </div>
+    
+    <button id="style-switcher" class="switcher-button">🌍</button>
+    
+    <script>
+        const MAPTILER_API_KEY = "{{ api_key }}";
+    </script>
+    <script src="{{ url_for('static', filename='map.js') }}"></script>
+</body>
+</html>
