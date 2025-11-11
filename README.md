@@ -1,4 +1,4 @@
-# MapExplorer
+# Maptiler Map
 
 Simple web map with search functionality using Flask and MapTiler.
 
