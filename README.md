@@ -15,7 +15,7 @@ pip install flask
 python app.py
 ```
 
-Add your MapTiler API key in `app.py`.
+Add your MapTiler API key in `.env`.
 
 Open `http://localhost:5000`
 
